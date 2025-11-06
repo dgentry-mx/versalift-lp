@@ -625,7 +625,7 @@ sup {
 		@media ($bp-large) {
 			flex-direction: row;
 			gap: 16px;
-			justify-content: center;
+			justify-content: flex-start;
 
 		}
 	}
@@ -638,6 +638,9 @@ sup {
 		max-width: 440px;
 		margin: 0 auto;
 
+		@media ($bp-large) {
+			margin: 0;
+		}
 
 		.button {
 			font-size: clamp(16px, 3vw, 22px);
@@ -756,6 +759,11 @@ sup {
 			margin-left: -30px;
 			margin-right: -30px;
 		}
+
+		.slick-track {
+			display: flex;
+			min-height: 500px;
+		}
 	}
 
 	&__item {
@@ -764,6 +772,9 @@ sup {
 		padding: 20px 10px 20px;
 		background: rgba(255, 255, 255, 0.69);
 		margin: 0 15px;
+		display: flex !important;
+		flex-direction: column;
+		height: auto;
 
 		@media ($bp-large) {
 			margin: 0 30px;
@@ -811,8 +822,9 @@ sup {
 		font-family: $font-family-headlines;
 		text-transform: uppercase;
 		font-size: clamp(20px, 3vw, 34px);
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		line-height: 1;
+		margin-top: auto;
 	}
 
 	&__item-price {

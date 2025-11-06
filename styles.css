@@ -138,8 +138,8 @@ sup {
 
 .button:hover,
 .button:focus {
-  background: #7b2421;
-  border-color: #7b2421;
+  background: rgb(123.2, 36, 32.8);
+  border-color: rgb(123.2, 36, 32.8);
   color: #ffffff;
   text-decoration: none;
 }
@@ -551,7 +551,7 @@ sup {
   .lp-truck-interactive__actions {
     flex-direction: row;
     gap: 16px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 .lp-truck-interactive__action {
@@ -561,6 +561,11 @@ sup {
   width: 100%;
   max-width: 440px;
   margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .lp-truck-interactive__action {
+    margin: 0;
+  }
 }
 .lp-truck-interactive__action .button {
   font-size: clamp(16px, 3vw, 22px);
@@ -671,12 +676,19 @@ sup {
     margin-right: -30px;
   }
 }
+.lp-carousel__items .slick-track {
+  display: flex;
+  min-height: 500px;
+}
 .lp-carousel__item {
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
   padding: 20px 10px 20px;
   background: rgba(255, 255, 255, 0.69);
   margin: 0 15px;
+  display: flex !important;
+  flex-direction: column;
+  height: auto;
 }
 @media (min-width: 1024px) {
   .lp-carousel__item {
@@ -720,8 +732,9 @@ sup {
   font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   font-size: clamp(20px, 3vw, 34px);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 1;
+  margin-top: auto;
 }
 .lp-carousel__item-price {
   font-size: clamp(20px, 3vw, 34px);
