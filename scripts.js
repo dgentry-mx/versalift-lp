@@ -61,7 +61,6 @@ $(document).ready(function () {
 	const $images = $('.lp-truck-interactive__image');
 	const $defaultImage = $('.lp-truck-interactive__image[data-truck="0"]');
 
-	// Show default image on load
 	$defaultImage.addClass('active');
 
 	$hotspots.each(function () {
@@ -71,16 +70,15 @@ $(document).ready(function () {
 		$hotspot.find('button').on('click', function () {
 			const isActive = $hotspot.hasClass('lp-truck-interactive__hotspot--active');
 
-			// Reset all
 			$hotspots.removeClass('lp-truck-interactive__hotspot--active');
+			$hotspots.find('button').html('+');
 			$images.removeClass('active');
 
 			if (!isActive) {
-				// Activate clicked hotspot
 				$hotspot.addClass('lp-truck-interactive__hotspot--active');
+				$hotspot.find('button').html('–');
 				$(`.lp-truck-interactive__image[data-truck="${toggleKey}"]`).addClass('active');
 			} else {
-				// Show default image
 				$defaultImage.addClass('active');
 			}
 		});
