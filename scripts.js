@@ -43,7 +43,7 @@ $(document).ready(function () {
 	$('.open-modal--stock').on('click', function (e) {
 		e.preventDefault();
 		if ($(this).data('truck-number')) {
-			$('.modal--stock').find('input[name="truckNumber"]').val($(this).data('truck-number'));
+			$('.modal--stock').find('input[name="0-1/unit_model_name"]').val($(this).data('truck-number'));
 		}
 		$('.modal--stock').show();
 		$('body').addClass('no-scroll');
@@ -83,5 +83,8 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+
+
 
 });

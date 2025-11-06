@@ -977,9 +977,13 @@ sup {
 		position: relative;
 		width: 100%;
 		max-width: 690px;
+		max-height: 90vh;
 		background: $c-secondary;
 		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 		padding: 40px 40px 60px;
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
 	}
 
 	&__close {
@@ -1021,30 +1025,81 @@ sup {
 		margin-bottom: 24px;
 	}
 
-	label {
-		display: block;
-		color: white;
-		font-size: 14px;
-		margin-bottom: 8px;
+	label,
+	.hsfc-ErrorAlert {
+		display: block !important;
+		color: $c-white !important;
+		font-size: 14px !important;
+		margin-bottom: 8px !important;
+	}
+
+	.hsfc-ErrorAlert {
+		color: red !important;
+		margin-bottom: 0 !important;
+	}
+
+	.hsfc-Row {
+		margin-bottom: 14px !important;
+	}
+
+	.hsfc-Step__Content {
+		padding: 0 !important;
+	}
+
+	button[type="submit"] {
+		background: $c-primary;
+		border: 1px solid $c-primary;
+		color: $c-white;
+		cursor: pointer;
+		display: inline-block;
+		font-family: $font-family-headlines;
+		font-size: $font-size-base;
+		font-weight: $font-weight-bold;
+		line-height: 1;
+		margin: 0;
+		outline: none;
+		padding: 12px 30px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: $transition-animation $transition-slow;
+		width: auto;
+		-webkit-font-smoothing: antialiased;
+
+		&:hover,
+		&:focus  {
+			background: color.scale($c-primary, $lightness: - 20%) !important;
+			border-color: color.scale($c-primary, $lightness: - 20%) !important;
+			color: $c-white !important;
+			text-decoration: none;
+		}
 	}
 
 	input,
-	textarea {
-		width: 100%;
-		padding: 16px 20px;
-		border: none;
-		font-size: 18px;
-		color: $c-black;
-		background: $c-white;
-		font-family: $font-family-base;
+	textarea,
+	select {
+		width: 100% !important;
+		padding: 12px 20px !important;
+		border: none !important;
+		font-size: 18px !important;
+		color: $c-black !important;
+		background: $c-white !important;
+		font-family: $font-family-base !important;
+	}
+
+	.hsfc-DropdownOptions {
+		 
+		> ul > li {
+			font-size: 18px !important;
+			color: $c-black !important;
+		}
 	}
 
 	input::placeholder {
-		color: $c-black;
+		color: $c-black !important;
 	}
 
 	input:focus {
-		outline: none;
+		outline: none !important;
 	}
 
 	.ready-to-go {

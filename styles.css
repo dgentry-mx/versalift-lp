@@ -867,9 +867,13 @@ sup {
   position: relative;
   width: 100%;
   max-width: 690px;
+  max-height: 90vh;
   background: #112D4F;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   padding: 40px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 .modal__close {
   position: absolute;
@@ -905,27 +909,68 @@ sup {
 .modal .form-group {
   margin-bottom: 24px;
 }
-.modal label {
-  display: block;
-  color: white;
-  font-size: 14px;
-  margin-bottom: 8px;
+.modal label,
+.modal .hsfc-ErrorAlert {
+  display: block !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+}
+.modal .hsfc-ErrorAlert {
+  color: red !important;
+  margin-bottom: 0 !important;
+}
+.modal .hsfc-Row {
+  margin-bottom: 14px !important;
+}
+.modal .hsfc-Step__Content {
+  padding: 0 !important;
+}
+.modal button[type=submit] {
+  background: #9A2D29;
+  border: 1px solid #9A2D29;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 12px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: cubic-bezier(0.4, 0, 1, 1) 300ms;
+  width: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.modal button[type=submit]:hover, .modal button[type=submit]:focus {
+  background: rgb(123.2, 36, 32.8) !important;
+  border-color: rgb(123.2, 36, 32.8) !important;
+  color: #ffffff !important;
+  text-decoration: none;
 }
 .modal input,
-.modal textarea {
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  font-size: 18px;
-  color: #000000;
-  background: #ffffff;
-  font-family: "Roboto", sans-serif;
+.modal textarea,
+.modal select {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  border: none !important;
+  font-size: 18px !important;
+  color: #000000 !important;
+  background: #ffffff !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.modal .hsfc-DropdownOptions > ul > li {
+  font-size: 18px !important;
+  color: #000000 !important;
 }
 .modal input::placeholder {
-  color: #000000;
+  color: #000000 !important;
 }
 .modal input:focus {
-  outline: none;
+  outline: none !important;
 }
 .modal .ready-to-go {
   margin-top: 24px;
